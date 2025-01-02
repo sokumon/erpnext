@@ -201,21 +201,6 @@ frappe.treeview_settings["Account"] = {
 			__("View")
 		);
 
-		treeview.page.add_inner_button(
-			__("Journal Entry"),
-			function () {
-				frappe.new_doc("Journal Entry", { company: get_company() });
-			},
-			__("Create")
-		);
-		treeview.page.add_inner_button(
-			__("Company"),
-			function () {
-				frappe.new_doc("Company");
-			},
-			__("Create")
-		);
-
 		// financial statements
 		for (let report of [
 			"Trial Balance",
