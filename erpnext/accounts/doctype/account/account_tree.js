@@ -193,13 +193,7 @@ frappe.treeview_settings["Account"] = {
 			__("View")
 		);
 
-		treeview.page.add_inner_button(
-			__("Period Closing Voucher"),
-			function () {
-				frappe.set_route("List", "Period Closing Voucher", { company: get_company() });
-			},
-			__("View")
-		);
+		treeview.page.add_divider_to_button_group(__("View"));
 
 		// financial statements
 		for (let report of [
@@ -216,7 +210,7 @@ frappe.treeview_settings["Account"] = {
 				function () {
 					frappe.set_route("query-report", report, { company: get_company() });
 				},
-				__("Financial Statements")
+				__("View")
 			);
 		}
 	},
